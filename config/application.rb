@@ -1,6 +1,6 @@
 require_relative 'boot'
 
-require "rails"
+require "rails/all"
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
@@ -12,12 +12,21 @@ require "action_cable/engine"
 # require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module SoundOverflowApi
   class Application < Rails::Application
+
+
+#   AWS::S3::Base.establish_connection!(
+#     :access_key_id     => 'AKIAIN27A3BNXWGLDCFQ',
+#     :secret_access_key => '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'
+# )
+#
+#   BUCKET='soundoverflow'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
