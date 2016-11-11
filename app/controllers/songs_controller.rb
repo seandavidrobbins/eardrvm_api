@@ -11,10 +11,10 @@ class SongsController < ApplicationController
     set_album
     song = Song.create(
       title: song_params[:title],
-      image: song_params[:image],
+      audio: song_params[:audio],
       album_id: @album.id
     )
-
+    
     if song.save
       render json: { status: 200, message: 'Song successfully uploaded', song: song}
      else
@@ -39,7 +39,7 @@ class SongsController < ApplicationController
     end
 
     def song_params
-      # {song: {title: " ", image: " "} } needs to be like this coming in
-      params.required(:song).permit(:title, :image)
+      # {song: {title: " ", audio: " "} } needs to be like this coming in
+      params.required(:song).permit(:title, :audio)
     end
 end
