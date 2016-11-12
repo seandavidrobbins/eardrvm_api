@@ -4,7 +4,7 @@ class SongsController < ApplicationController
 
   def index
     set_album
-    render json: {status: 200, songs: @album.get_songs_data}
+    render json: {status: 200, song: @album.get_songs_data}
   end
 
   def create
@@ -14,7 +14,7 @@ class SongsController < ApplicationController
       audio: song_params[:audio],
       album_id: @album.id
     )
-    
+
     if song.save
       render json: { status: 200, message: 'Song successfully uploaded', song: song}
      else
