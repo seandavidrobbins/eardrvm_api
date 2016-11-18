@@ -45,6 +45,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+Paperclip.options[:command_path] = "/usr/local/bin/ß"
+
   config.paperclip_defaults = {
       storage: :s3,
       s3_protocol: 'http',

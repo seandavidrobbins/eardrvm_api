@@ -11,6 +11,9 @@ gem 'figaro'
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk', '<= 2.0'
 gem 'aws-s3', :require => 'aws/s3'
+
+gem 'mime-types', require: 'mime/types/full'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:4000'  # accepts requests from any domain on the internet, to be more secure you would want to specify origins that you want to accept requests
+    origins '*'  # accepts requests from any domain on the internet, to be more secure you would want to specify origins that you want to accept requests
 
     resource '*',
       headers: :any,

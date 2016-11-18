@@ -15,4 +15,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+/config/application.yml
 .env
+
+/log/development.log
+/tmp/pids/server.pid
